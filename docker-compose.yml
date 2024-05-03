@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  nessus:
+    image: tenable/nessus:latest-oracle
+    restart: always
+    container_name: nessus
+    environment:
+      USERNAME: <Nombre de usuario>
+      PASSWORD: <Contraseña>
+      ACTIVATION_CODE: <Código de activación> #https://www.tenable.com/products/nessus/activation-code
+    ports:
+      - 8834:8834
